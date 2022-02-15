@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
-{
+{   
     public Brick BrickPrefab;
     public int LineCount = 6;
     public Rigidbody Ball;
