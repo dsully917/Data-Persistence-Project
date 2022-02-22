@@ -41,8 +41,7 @@ public class MainManager : MonoBehaviour
         }
 
         gameDataManager = GameObject.Find("GameDataManager").GetComponent<GameDataManager>();
-
-        HighScoreText.text = $"Best Score : {gameDataManager.highUser} : {gameDataManager.highScore}";
+        DisplayHighScore();
     }
 
     private void Update()
@@ -77,8 +76,13 @@ public class MainManager : MonoBehaviour
         {
             gameDataManager.highScore = m_Points;
             gameDataManager.highUser = gameDataManager.currentUser;
-            HighScoreText.text = $"Best Score : {gameDataManager.highUser} : {gameDataManager.highScore}";
+            DisplayHighScore();
         }
+    }
+
+    void DisplayHighScore()
+    {
+        HighScoreText.text = $"Best Score : {gameDataManager.highUser} : {gameDataManager.highScore}";
     }
 
     public void GameOver()
